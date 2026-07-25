@@ -12,12 +12,12 @@ The project implements several MATLAB simulations to evaluate regular hexagonal 
 
 The main objectives of this module are:
 
-- Simulate GSM cellular networks using regular and irregular topologies.
-- Analyze the impact of the frequency reuse factor on co-channel interference.
-- Evaluate Carrier-to-Interference Ratio (CIR) under different propagation environments.
-- Study the influence of the propagation exponent on network performance.
-- Compare random frequency allocation against Game Theory-based optimization.
-- Estimate network quality using voice and data performance indicators.
+* Simulate GSM cellular networks using regular and irregular topologies.
+* Analyze the impact of the frequency reuse factor on co-channel interference.
+* Evaluate Carrier-to-Interference Ratio (CIR) under different propagation environments.
+* Study the influence of the propagation exponent on network performance.
+* Compare random frequency allocation against Game Theory-based optimization.
+* Estimate network quality using voice and data performance indicators.
 
 ---
 
@@ -45,10 +45,10 @@ All simulations were developed using MATLAB.
 
 The repository includes several scripts responsible for different stages of the analysis:
 
-- `channelallocation.m`
-- `reuse.m`
-- `PRUEBA.m`
-- `rng.m`
+* `channelallocation.m`
+* `reuse.m`
+* `PRUEBA.m`
+* `rng.m`
 
 These programs generate cellular layouts, assign frequency channels, compute propagation losses, evaluate Carrier-to-Interference Ratios, and visualize the obtained results.
 
@@ -74,13 +74,19 @@ The lowest performance is obtained when using aggressive frequency reuse togethe
 
 Conversely, larger reuse factors and higher attenuation environments produce substantially cleaner radio conditions and improved communication quality.
 
-The spatial distribution of CIR can be observed in the following simulation results:
+### Regular Cellular Deployments
 
-- `cir-heatmap-regular-k3-g2.png`
-- `cir-heatmap-regular-k7-g2.png`
-- `cir-heatmap-regular-k7-g4.png`
+<p align="center">
+<img src="../screenshots/gsm/cir-heatmap-regular-k3-g2.png" width="700">
+</p>
 
-These heatmaps clearly illustrate how interference decreases as radio propagation conditions become more favorable.
+<p align="center">
+<img src="../screenshots/gsm/cir-heatmap-regular-k7-g2.png" width="700">
+</p>
+
+<p align="center">
+<img src="../screenshots/gsm/cir-heatmap-regular-k7-g4.png" width="700">
+</p>
 
 ---
 
@@ -92,9 +98,11 @@ Cell sizes ranging from 2 km to 15 km were simulated.
 
 The obtained results demonstrate that Carrier-to-Interference Ratio remains practically unchanged when the reuse factor is fixed. Since both serving and interfering cells scale proportionally, the signal-to-interference relationship remains nearly constant regardless of absolute cell size.
 
-This behavior is illustrated by the cumulative distribution function shown in:
+This behavior is illustrated by the cumulative distribution function below.
 
-- `cir-cdf-radius-comparison.png`
+<p align="center">
+<img src="../screenshots/gsm/cir-cdf-radius-comparison.png" width="700">
+</p>
 
 ---
 
@@ -108,12 +116,23 @@ Instead of assigning frequencies randomly, the project implements a decentralize
 
 The optimization process converges after only a few iterations, producing a significantly improved frequency distribution compared with purely random channel allocation.
 
-The optimized deployments are illustrated in:
+### Irregular Cellular Deployments
 
-- `cir-heatmap-irregular-k3.png`
-- `cir-heatmap-irregular-k5.png`
-- `cir-heatmap-irregular-k7.png`
-- `cir-heatmap-irregular-k9.png`
+<p align="center">
+<img src="../screenshots/gsm/cir-heatmap-irregular-k3.png" width="700">
+</p>
+
+<p align="center">
+<img src="../screenshots/gsm/cir-heatmap-irregular-k5.png" width="700">
+</p>
+
+<p align="center">
+<img src="../screenshots/gsm/cir-heatmap-irregular-k7.png" width="700">
+</p>
+
+<p align="center">
+<img src="../screenshots/gsm/cir-heatmap-irregular-k9.png" width="700">
+</p>
 
 These simulations demonstrate how increasing the number of available frequency groups progressively reduces co-channel interference throughout the network.
 
@@ -123,7 +142,7 @@ These simulations demonstrate how increasing the number of available frequency g
 
 The complete simulation process follows the sequence below:
 
-```
+```text
 Network Initialization
           │
           ▼
@@ -157,16 +176,16 @@ Particular attention was given to the 5th percentile, representing users located
 
 The results show that:
 
-- Higher reuse factors significantly improve service reliability.
-- Higher propagation exponents reduce co-channel interference.
-- Better CIR values directly translate into higher voice quality (MOS) and increased GPRS throughput.
-- Poor CIR values produce unstable communications and degraded user experience at cell edges.
+* Higher reuse factors significantly improve service reliability.
+* Higher propagation exponents reduce co-channel interference.
+* Better CIR values directly translate into higher voice quality (MOS) and increased GPRS throughput.
+* Poor CIR values produce unstable communications and degraded user experience at cell edges.
 
 ---
 
 # Design Decisions
 
-Several engineering decisions were adopted throughout the project:
+Several engineering decisions were adopted throughout the project.
 
 **MATLAB-Based Simulation**
 
