@@ -80,6 +80,10 @@ Channel selection is performed after analyzing spectrum occupancy. The **5 GHz b
 
 Configuration files used throughout the deployment are available in the **config/** directory.
 
+<p align="center">
+<img src="../screenshots/wifi/inssider-channel-analysis.png" width="700">
+</p>
+
 ---
 
 ## Wireless Security
@@ -109,6 +113,10 @@ The project includes:
 
 Packet captures are stored in the **pcaps/** directory for later inspection.
 
+<p align="center">
+<img src="../screenshots/wifi/kismet-network-monitoring.png" width="700">
+</p>
+
 ---
 
 ## Validation
@@ -136,6 +144,10 @@ Several engineering decisions were adopted during the laboratory deployment:
 - Exclusive use of Linux command-line networking tools.
 - Manual configuration instead of graphical network managers.
 - Packet-level validation using Wireshark and Kismet.
+
+<p align="center">
+<img src="../screenshots/wifi/wireshark-80211-beacon-analysis.png" width="700">
+</p>
 
 ---
 
