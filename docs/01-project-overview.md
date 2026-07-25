@@ -14,6 +14,18 @@ The project combines laboratory experimentation, protocol analysis, wireless per
 
 ---
 
+## Repository Scope
+
+This repository covers three complementary areas of wireless communications engineering, from practical network deployment to mathematical simulation.
+
+<p align="center">
+<img src="../screenshots/wifi/wifi-network-architecture.png" width="700">
+</p>
+
+The project combines laboratory experimentation with analytical modeling to provide a comprehensive view of modern wireless communication systems.
+
+---
+
 # Objectives
 
 The project was developed to achieve the following engineering objectives:
