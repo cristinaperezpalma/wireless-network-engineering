@@ -14,7 +14,7 @@ The project combines laboratory experimentation, protocol analysis, wireless per
 
 ---
 
-## Repository Scope
+# Repository Scope
 
 This repository covers three complementary areas of wireless communications engineering, from practical network deployment to mathematical simulation.
 
@@ -77,6 +77,7 @@ The repository is organized into documentation, configuration files, MATLAB simu
 # Engineering Workflow
 
 The project follows the workflow illustrated below:
+
 ```text
 Wireless Configuration
         │
