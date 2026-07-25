@@ -32,6 +32,10 @@ The laboratory consists of a software-defined wireless network with separate man
 
 This architecture allows wireless interfaces to be reconfigured without losing remote administrative access.
 
+<p align="center">
+<img src="../screenshots/wifi/wifi-network-architecture.png" width="700">
+</p>
+
 ---
 
 ## Hardware and Software Environment
@@ -53,6 +57,10 @@ This architecture allows wireless interfaces to be reconfigured without losing r
 - Wireshark
 - Kismet
 - inSSIDer
+
+<p align="center">
+<img src="../screenshots/wifi/raspberry-pi-wireless-cards.png" width="700">
+</p>
 
 ---
 
