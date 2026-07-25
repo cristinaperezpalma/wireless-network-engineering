@@ -29,6 +29,10 @@ IoT end-devices transmit encrypted LoRa frames to a LoRaWAN gateway. The gateway
 
 Grafana connects directly to InfluxDB to generate dashboards for monitoring network performance and signal quality in real time.
 
+<p align="center">
+<img src="../screenshots/lorawan/lorawan-architecture-diagram.png" width="750">
+</p>
+
 ---
 
 # Hardware and Software Environment
@@ -70,6 +74,10 @@ The mote periodically transmits telemetry messages every 20 seconds and operates
 
 Each device is uniquely identified by its DevEUI while authentication is performed dynamically through the OTAA join procedure.
 
+<p align="center">
+<img src="../screenshots/lorawan/putty-serial-configuration.png" width="650">
+</p>
+
 ---
 
 # ChirpStack Configuration
@@ -89,6 +97,10 @@ The deployment process consists of:
 
 Once the device successfully joins the network, ChirpStack manages packet decryption, session keys and application data routing.
 
+<p align="center">
+<img src="../screenshots/lorawan/chirpstack-gateway-setup.png" width="750">
+</p>
+
 ---
 
 # Docker Deployment
@@ -104,13 +116,17 @@ The containerized environment includes:
 
 Containerization simplifies deployment, improves reproducibility, and isolates individual services from the host operating system.
 
+<p align="center">
+<img src="../screenshots/lorawan/docker-services-deployment.png" width="750">
+</p>
+
 ---
 
 # Telemetry Pipeline
 
 The telemetry processing pipeline follows the sequence below:
 
-```
+```text
 IoT End-Device
         │
         ▼
@@ -142,6 +158,14 @@ scripts/dashboards/1744362274480.json
 
 The dashboard continuously displays received telemetry without requiring manual data processing.
 
+<p align="center">
+<img src="../screenshots/lorawan/grafana-datasource-config.png" width="750">
+</p>
+
+<p align="center">
+<img src="../screenshots/lorawan/grafana-dashboard-import.png" width="750">
+</p>
+
 ---
 
 # Telemetry Monitoring
@@ -159,6 +183,10 @@ The monitored parameters include:
 - Geographic coordinates decoded using Cayenne LPP
 
 These metrics provide continuous insight into link quality and communication reliability.
+
+<p align="center">
+<img src="../screenshots/lorawan/chirpstack-json-payload.png" width="750">
+</p>
 
 ---
 
@@ -187,11 +215,15 @@ The end-device was gradually moved approximately 400 meters away from the gatewa
 
 Grafana dashboards clearly showed the progressive degradation of RSSI and SNR until communication was completely lost at the edge of the coverage area.
 
+<p align="center">
+<img src="../screenshots/lorawan/grafana-rssi-snr-metrics.png" width="750">
+</p>
+
 ---
 
 # Design Decisions
 
-Several engineering decisions were adopted throughout the deployment:
+Several engineering decisions were adopted throughout the deployment.
 
 **Spread Factor 7 (SF7)**
 
