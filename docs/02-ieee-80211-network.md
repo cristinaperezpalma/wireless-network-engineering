@@ -8,7 +8,7 @@ Rather than relying on graphical network managers, the infrastructure is configu
 
 ---
 
-## Objectives
+# Objectives
 
 The main objectives of this module are:
 
@@ -21,7 +21,7 @@ The main objectives of this module are:
 
 ---
 
-## Laboratory Architecture
+# Laboratory Architecture
 
 The laboratory consists of a software-defined wireless network with separate management and data planes.
 
@@ -38,9 +38,9 @@ This architecture allows wireless interfaces to be reconfigured without losing r
 
 ---
 
-## Hardware and Software Environment
+# Hardware and Software Environment
 
-### Hardware
+## Hardware
 
 - TP-LINK TL-WDN4800 (Atheros chipset)
 - TP-LINK TL-WN725N USB adapter
@@ -48,7 +48,7 @@ This architecture allows wireless interfaces to be reconfigured without losing r
 - Raspberry Pi
 - Ubuntu Linux workstation
 
-### Software
+## Software
 
 - Ubuntu Linux
 - Hostapd
@@ -64,7 +64,7 @@ This architecture allows wireless interfaces to be reconfigured without losing r
 
 ---
 
-## Wireless Network Configuration
+# Wireless Network Configuration
 
 The Access Point is deployed using **Hostapd**, while client authentication is managed with **wpa_supplicant**.
 
@@ -86,7 +86,7 @@ Configuration files used throughout the deployment are available in the **config
 
 ---
 
-## Wireless Security
+# Wireless Security
 
 Three different IEEE 802.11 security configurations are implemented and evaluated:
 
@@ -98,7 +98,7 @@ These scenarios allow comparison between legacy and modern wireless security mec
 
 ---
 
-## Traffic Capture and Analysis
+# Traffic Capture and Analysis
 
 Wireless traffic is monitored using several analysis tools.
 
@@ -119,7 +119,7 @@ Packet captures are stored in the **pcaps/** directory for later inspection.
 
 ---
 
-## Validation
+# Validation
 
 Wireless connectivity is verified after each deployment stage by validating:
 
@@ -135,7 +135,7 @@ The captured traces confirm the correct operation of the wireless infrastructure
 
 ---
 
-## Design Decisions
+# Design Decisions
 
 Several engineering decisions were adopted during the laboratory deployment:
 
@@ -151,6 +151,6 @@ Several engineering decisions were adopted during the laboratory deployment:
 
 ---
 
-## Summary
+# Summary
 
 This module demonstrates the deployment, configuration and validation of an IEEE 802.11 wireless infrastructure using Linux networking tools. The project covers Access Point configuration, client authentication, wireless security, spectrum analysis and packet inspection, providing practical experience with WLAN deployment and wireless network troubleshooting.
