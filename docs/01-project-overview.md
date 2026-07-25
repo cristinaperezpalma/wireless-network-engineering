@@ -65,7 +65,7 @@ The repository is organized into documentation, configuration files, MATLAB simu
 # Engineering Workflow
 
 The project follows the workflow illustrated below:
-
+```text
 Wireless Configuration
         │
         ▼
@@ -79,6 +79,7 @@ Mathematical Modeling
         │
         ▼
 Wireless Network Optimization
+```
 
 Each technical area builds upon the previous one, combining practical deployments with analytical evaluation to better understand wireless communication systems.
 
