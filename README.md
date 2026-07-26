@@ -1,66 +1,117 @@
 # Wireless Network Engineering
 
-A complete wireless network infrastructure project involving the deployment, analysis, and simulation of modern communication systems using **IEEE 802.11, LoRaWAN, and GSM** technologies.
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![MATLAB](https://img.shields.io/badge/MATLAB-R2024-orange)
+![Ubuntu](https://img.shields.io/badge/Linux-Ubuntu-E95420)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![LoRaWAN](https://img.shields.io/badge/LoRaWAN-EU868-green)
+![IEEE 802.11](https://img.shields.io/badge/IEEE-802.11-blue)
 
-The project explores local area networks, low-power wide-area telemetry, and large-scale cellular deployments, bridging the gap between theoretical radio frequency (RF) models and empirical network performance.
+Deployment, analysis and simulation of modern wireless communication systems using **IEEE 802.11, LoRaWAN and GSM** technologies.
 
----
-
-## Project Overview
-
-This project was developed as part of a Telecommunications Engineering degree with the objective of deploying, analyzing, and optimizing wireless networks across different frequency bands and architectures.
-
-The infrastructure includes:
-
-- IEEE 802.11 Wi-Fi networks (2.4 GHz and 5 GHz)
-- LoRaWAN IoT telemetry deployment
-- Centralized ChirpStack Network/Application server
-- Containerized monitoring backend (InfluxDB & Grafana)
-- GSM cellular topologies
-- Dynamic frequency allocation algorithms
-- Mathematical RF simulation environments
+This repository documents a complete wireless networking project developed during a Telecommunications Engineering degree. It combines practical laboratory deployments with mathematical simulations to study the behavior, performance, and optimization of modern wireless communication systems.
 
 ---
 
-## Features
-
-- Software-defined AP deployment
-- 802.11 Security Auditing (WEP, WPA/WPA2)
-- Deep Packet Inspection of MAC-layer frames
-- Spectral saturation analysis
-- LoRaWAN End-Node OTAA Provisioning
-- Containerized backend orchestration
-- Real-time RSSI and SNR telemetry tracking
-- Mathematical simulation of Carrier-to-Interference Ratio (CIR)
-- Frequency Reuse factor analysis
-- Game Theory autonomous channel allocation
+<p align="center">
+<img src="screenshots/wifi/wifi-network-architecture.png" width="850">
+</p>
 
 ---
 
-## Technologies
+# Contents
+
+- Project Overview
+- Features
+- Technologies
+- Engineering Workflow
+- Repository Structure
+- Documentation
+- Project Highlights
+- Learning Outcomes
+- Repository Contents
+- Repository Statistics
+- License
+
+---
+
+# Project Overview
+
+The repository covers three complementary areas of wireless communications engineering, progressing from local wireless networking to Internet of Things (IoT) infrastructures and large-scale cellular planning.
+
+The project combines theoretical concepts with practical implementation through laboratory experiments, protocol analysis, telemetry monitoring, and mathematical simulation.
+
+The implemented modules include:
+
+- **IEEE 802.11 Wireless Local Area Networks (WLANs)**
+- **LoRaWAN Low-Power Wide-Area Networks (LPWANs)**
+- **GSM Cellular Frequency Planning**
+- **Wireless Traffic Analysis**
+- **Real-Time Telemetry Monitoring**
+- **Carrier-to-Interference Ratio (CIR) Simulation**
+- **Dynamic Frequency Allocation Algorithms**
+
+---
+
+# Features
+
+- IEEE 802.11 Access Point deployment using Linux
+- Manual wireless interface configuration
+- WPA/WPA2 authentication
+- Wireless spectrum analysis
+- IEEE 802.11 packet capture and inspection
+- LoRaWAN infrastructure deployment
+- Secure OTAA device provisioning
+- ChirpStack Network & Application Server configuration
+- Docker-based backend deployment
+- InfluxDB and Grafana integration
+- RSSI and SNR monitoring
+- GSM frequency reuse simulation
+- Carrier-to-Interference Ratio (CIR) evaluation
+- Game Theory-based channel allocation
+- MATLAB numerical simulations
+
+---
+
+# Technologies
 
 | Category | Technologies |
 |-----------|--------------|
-| Wireless | IEEE 802.11, LoRaWAN, GSM |
+| Wireless Networks | IEEE 802.11, LoRaWAN, GSM |
 | Programming | MATLAB |
-| Networking | Hostapd, WPA Supplicant |
-| Analysis | Wireshark, libpcap |
+| Operating System | Ubuntu Linux, Raspberry Pi OS |
+| Wireless Configuration | Hostapd, WPA Supplicant |
+| Packet Analysis | Wireshark, Kismet, inSSIDer |
+| IoT Platform | ChirpStack |
 | Monitoring | Grafana |
 | Database | InfluxDB |
 | Containerization | Docker |
-| Operating System | Ubuntu Linux, Raspbian |
 
 ---
 
-# Network Topology
+# Engineering Workflow
 
-The following figure shows the architectural separation of the management and data planes in the IEEE 802.11 deployment.
+```text
+IEEE 802.11 Deployment
+          │
+          ▼
+Wireless Traffic Analysis
+          │
+          ▼
+LoRaWAN Telemetry
+          │
+          ▼
+GSM Simulation
+          │
+          ▼
+Wireless Network Evaluation
+```
 
-![Wi-Fi Network Architecture](screenshots/wifi/wifi-network-architecture.png)
+Each module builds upon the previous one, combining practical experimentation with analytical evaluation to better understand wireless communication systems.
 
 ---
 
-# Project Structure
+# Repository Structure
 
 ```text
 wireless-network-engineering/
@@ -77,6 +128,7 @@ wireless-network-engineering/
 │   │   ├── PRUEBA.m
 │   │   ├── reuse.m
 │   │   └── rng.m
+│   │
 │   └── dashboards/
 │       └── 1744362274480.json
 │
@@ -98,72 +150,109 @@ wireless-network-engineering/
 
 ---
 
-# Documentation
+## Documentation
 
-Detailed technical documentation is available inside the **docs** directory.
+The repository documentation is organized into four technical modules:
 
 | Document | Description |
 |----------|-------------|
-| [01 - Project Overview](docs/01-project-overview.md) | High-level project architecture, scope, and design decisions |
-| [02 - IEEE 802.11 Network](docs/02-ieee-80211-network.md) | WLAN setup, MAC-layer auditing, spectral analysis, and security (WPA2) |
-| [03 - LoRaWAN IoT](docs/03-lorawan-iot.md) | LPWAN deployment, OTAA provisioning, and containerized telemetry pipelines |
-| [04 - GSM Frequency Reuse](docs/04-gsm-frequency-reuse.md) | Cellular simulation, CIR dynamics, and Game Theory frequency allocation |
+| [01 - Project Overview](docs/01-project-overview.md) | Project scope, objectives, repository organization, and engineering workflow. |
+| [02 - IEEE 802.11 Network](docs/02-ieee-80211-network.md) | Wi-Fi deployment, wireless security, spectrum analysis, and packet inspection. |
+| [03 - LoRaWAN IoT](docs/03-lorawan-iot.md) | LPWAN deployment, OTAA provisioning, ChirpStack configuration, Docker services, and telemetry monitoring. |
+| [04 - GSM Frequency Reuse](docs/04-gsm-frequency-reuse.md) | Cellular planning, Carrier-to-Interference Ratio analysis, MATLAB simulations, and Game Theory channel allocation. |
+
+---
+
+# Engineering Workflow
+
+The project follows the workflow illustrated below:
+
+```text
+IEEE 802.11 Deployment
+          │
+          ▼
+Wireless Traffic Analysis
+          │
+          ▼
+LoRaWAN Telemetry
+          │
+          ▼
+GSM Simulation
+          │
+          ▼
+Wireless Network Evaluation
+```
+
+Each module builds upon the previous one, combining practical deployment with analytical evaluation to better understand modern wireless communication systems.
 
 ---
 
 # Project Highlights
 
-## IEEE 802.11 Packet Analysis
+## IEEE 802.11 Wireless Networking
 
-Deep packet inspection of 802.11 management, control, and data frames to audit associations and cryptographic handshakes.
+Deployment and validation of a Linux-based IEEE 802.11 wireless infrastructure, including Access Point configuration, client authentication, spectrum analysis, and packet inspection.
 
-![Wi-Fi Analysis](screenshots/wifi/wireshark-80211-beacon-analysis.png)
-
----
-
-## LoRaWAN Telemetry
-
-Real-time signal degradation monitoring (RSSI and SNR) of a moving LoRa node using an orchestrated ChirpStack, InfluxDB, and Grafana pipeline.
-
-![LoRaWAN Metrics](screenshots/lorawan/grafana-rssi-snr-metrics.png)
+<p align="center">
+<img src="screenshots/wifi/wireshark-80211-beacon-analysis.png" width="750">
+</p>
 
 ---
 
-## GSM Cellular Simulation
+## LoRaWAN Infrastructure and IoT Telemetry
 
-Mathematical modeling of RF path loss, frequency reuse distances, and co-channel interference within large-scale geometries.
+End-to-end deployment of a LoRaWAN telemetry platform using ChirpStack, Docker, InfluxDB, and Grafana for real-time monitoring of RSSI and SNR metrics.
 
-![GSM Simulation](screenshots/gsm/cir-cdf-radius-comparison.png)
+<p align="center">
+<img src="screenshots/lorawan/grafana-rssi-snr-metrics.png" width="750">
+</p>
+
+---
+
+## GSM Cellular Network Planning
+
+MATLAB-based simulation of GSM cellular deployments to evaluate Carrier-to-Interference Ratio (CIR), frequency reuse strategies, and Game Theory-based channel allocation.
+
+<p align="center">
+<img src="screenshots/gsm/cir-cdf-radius-comparison.png" width="750">
+</p>
 
 ---
 
 # Learning Outcomes
 
-This project allowed me to gain practical experience with:
+Through the development of this project, the following practical skills were acquired:
 
-- Deployment and configuration of raw Linux wireless networking stacks
-- Bypassing standard network managers for granular interface control
-- Deep packet inspection and protocol analysis (Wireshark, Kismet)
-- End-to-end orchestration of containerized IoT telemetry pipelines
-- Securely bridging physical RF hardware to cloud databases
-- Mathematical modeling of RF path loss and co-channel interference
-- Implementation of Game Theory for dynamic, autonomous cellular frequency planning
+- Deployment and configuration of IEEE 802.11 wireless networks using Linux.
+- Configuration of Hostapd and WPA Supplicant for wireless communication.
+- Wireless traffic analysis through Wireshark and Kismet.
+- Packet capture and IEEE 802.11 management frame inspection.
+- Deployment of LoRaWAN infrastructures using ChirpStack.
+- Docker container orchestration for IoT services.
+- Integration of InfluxDB and Grafana for telemetry visualization.
+- Analysis of RSSI and SNR under different propagation scenarios.
+- Mathematical simulation of GSM cellular networks using MATLAB.
+- Evaluation of Carrier-to-Interference Ratio (CIR) under different frequency reuse factors.
+- Implementation of Game Theory algorithms for dynamic channel allocation.
 
 ---
 
 # Repository Contents
 
-This repository includes:
+The repository includes:
 
-- Technical engineering documentation
+- Technical documentation
 - MATLAB simulation scripts
-- Exported Grafana dashboards
-- Native Linux networking configuration files
-- Raw `.pcapng` network traffic captures
-- Visual architecture and telemetry screenshots
+- Grafana dashboard templates
+- Linux wireless configuration files
+- IEEE 802.11 packet captures
+- Laboratory screenshots
+- Network architecture diagrams
 
 ---
 
 # License
 
-This project is distributed under the MIT License.
+This project is distributed under the **MIT License**.
+
+See the **LICENSE** file for additional information.
